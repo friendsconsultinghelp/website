@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,66 +11,75 @@
       background-color: #155e95;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    /* Masonry layout */
+    .masonry {
+      column-count: 1;
+      column-gap: 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .masonry { column-count: 2; }
+    }
+    @media (min-width: 1024px) {
+      .masonry { column-count: 3; }
     }
 
-    .animate-fade-in {
-      animation: fadeIn 1s ease-out;
-    }
-    
-    .img-box {
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       transition: transform 0.4s ease;
+      opacity: 0;
+      transform: translateY(20px);
     }
-    .img-box:hover {
+
+    .masonry-item:hover {
       transform: scale(1.05);
     }
-        
+
+    .fade-in-start {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
   </style>
 </head>
 
 <body class="text-white font-sans min-h-screen py-10 px-4">
   <h1 class="text-3xl font-bold text-center text-cyan-300 mb-8">🎬 <i>Arkojit's Work Samples</i></h1>
-    <div class="mt-12 text-center text-sm text-amber-300 border-t border-gray-600 pt-6 pb-4 space-y-2">
-         <i>Price = Negotiable (Contact for Pricing)</i>
-    </div>
 
-    <br><br>
-
-   <div id="imageGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto fade-in">
-
-    <div class="img-box overflow-hidden rounded-lg shadow-lg aspect-[3/4] animate-fade-in">
-      <img src="https://res.cloudinary.com/djdgzhndc/image/upload/v1754897195/IMG_20250810_155532.jpg" alt="Sample 1" class="w-full h-full object-cover" />
-    </div>
-
-    <div class="img-box overflow-hidden rounded-lg shadow-lg aspect-auto  animate-fade-in">
-      <img src="https://res.cloudinary.com/djdgzhndc/image/upload/v1754897192/IMG_20250511_185813.jpg" alt="Sample 10" class="w-full h-full object-cover" />
-    </div>
-
-    <div class="img-box overflow-hidden rounded-lg shadow-lg aspect-auto animate-fade-in">
-      <img src="https://res.cloudinary.com/djdgzhndc/image/upload/v1754897191/IMG_20250810_155053.jpg" alt="Sample 2" class="w-full h-full object-cover" />
-    </div>
-
-    <div class="img-box overflow-hidden rounded-lg shadow-lg aspect-auto  animate-fade-in">
-      <img src="https://res.cloudinary.com/djdgzhndc/image/upload/v1754897191/IMG_20250627_022433.jpg" alt="Sample 3" class="w-full h-full object-cover" />
-    </div>
-
-    <div class="img-box overflow-hidden rounded-lg shadow-lg aspect-auto  animate-fade-in">
-      <img src="https://res.cloudinary.com/djdgzhndc/image/upload/v1754897171/IMG_20250613_005950.jpg" alt="Sample 4" class="w-full h-full object-cover" />
-    </div>
-
-    <div class="img-box overflow-hidden rounded-lg shadow-lg aspect-auto  animate-fade-in">
-      <img src="https://res.cloudinary.com/djdgzhndc/image/upload/v1754897169/IMG_20250202_023718_1738472584523.jpg" alt="Sample 5" class="w-full h-full object-cover" />
-    </div>
+  <div class="mt-12 text-center text-sm text-amber-300 border-t border-gray-600 pt-6 pb-4 space-y-2">
+    <i>Price = Negotiable (Contact for Pricing)</i>
   </div>
+
+  <br><br>
+
+  <div id="imageGrid" class="masonry max-w-6xl mx-auto">
+
+    <div class="masonry-item">
+      <img src="https://res.cloudinary.com/djdgzhndc/image/upload/v1754897195/IMG_20250810_155532.jpg" alt="Sample 1" class="w-full h-auto rounded-lg" />
+    </div>
+
+    <div class="masonry-item">
+      <img src="https://res.cloudinary.com/djdgzhndc/image/upload/v1754897192/IMG_20250511_185813.jpg" alt="Sample 10" class="w-full h-auto rounded-lg" />
+    </div>
+
+    <div class="masonry-item">
+      <img src="https://res.cloudinary.com/djdgzhndc/image/upload/v1754897191/IMG_20250810_155053.jpg" alt="Sample 2" class="w-full h-auto rounded-lg" />
+    </div>
+
+    <div class="masonry-item">
+      <img src="https://res.cloudinary.com/djdgzhndc/image/upload/v1754897191/IMG_20250627_022433.jpg" alt="Sample 3" class="w-full h-auto rounded-lg" />
+    </div>
+
+    <div class="masonry-item">
+      <img src="https://res.cloudinary.com/djdgzhndc/image/upload/v1754897171/IMG_20250613_005950.jpg" alt="Sample 4" class="w-full h-auto rounded-lg" />
+    </div>
+
+    <div class="masonry-item">
+      <img src="https://res.cloudinary.com/djdgzhndc/image/upload/v1754897169/IMG_20250202_023718_1738472584523.jpg" alt="Sample 5" class="w-full h-auto rounded-lg" />
+    </div>
   </div>
 
   <div class="text-center mt-10">
@@ -86,6 +94,17 @@
       be pursued for misuse.
     </p>
   </footer>
-</body>
 
+  <script>
+    // Fade-in animation
+    window.addEventListener("DOMContentLoaded", () => {
+      const items = document.querySelectorAll(".masonry-item");
+      items.forEach((item, i) => {
+        setTimeout(() => {
+          item.classList.add("fade-in-start");
+        }, i * 150);
+      });
+    });
+  </script>
+</body>
 </html>
