@@ -53,8 +53,123 @@
     .nav-link:hover::after {
       width: 100%;
     }
-  </style>
-  <style>
+
+    /* Enhanced Hero Section Styles */
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .animated-gradient {
+      background: linear-gradient(-45deg, #00d4ff, #9ff5cf, #00cfff, #7dd3fc, #22d3ee);
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease infinite;
+    }
+    
+    /* Typing animation for hero */
+    @keyframes heroTyping {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    
+    @keyframes heroBlink {
+      0%, 50% { border-color: transparent; }
+      51%, 100% { border-color: #000; }
+    }
+    
+    .hero-typing-text {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #000;
+      animation: heroTyping 3s steps(20) 1s both, heroBlink 1s step-end infinite;
+      display: inline-block;
+    }
+    
+    /* Floating animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      33% { transform: translateY(-10px) rotate(1deg); }
+      66% { transform: translateY(5px) rotate(-1deg); }
+    }
+    
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    /* Pulse animation for badge */
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 5px rgba(34, 211, 238, 0.5); }
+      50% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.8), 0 0 30px rgba(34, 211, 238, 0.4); }
+    }
+    
+    .pulse-glow {
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+    
+    /* Glass morphism effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Hover effects */
+    .hover-scale {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .hover-scale:hover {
+      transform: scale(1.05) translateY(-5px);
+    }
+    
+    /* Button glow effect */
+    .glow-button {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .glow-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transition: left 0.5s;
+    }
+    
+    .glow-button:hover::before {
+      left: 100%;
+    }
+    
+    /* Particle effect */
+    .particle {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    
+    @keyframes particleFloat {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Legacy typing animation for about section */
     @keyframes typing {
       0% {
         width: 0;
@@ -128,43 +243,90 @@
     </div>
   </div>
 
-  <script>
-    // Show popup automatically on page load
-    window.onload = function() {
-      document.getElementById("imagePopup").classList.remove("hidden");
-    }
-
-    function closeImagePopup() {
-      document.getElementById("imagePopup").classList.add("hidden");
-    }
-  </script>
-
-  <!-- Hero Section -->
-
-  <section class="text-center py-20 bg-gradient-to-r from-[#9ff5cf] to-[#00cfff] text-black">
-    <div class="inline-block">
-      <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2">
-        Welcome to
-      </h2>
-      <h2 class="typing text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2">
-         friends Consulting👋
-      </h2>
+  <!-- Enhanced Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center animated-gradient overflow-hidden">
+    <!-- Particle Background -->
+    <div id="particles" class="absolute inset-0 pointer-events-none"></div>
+    
+    <!-- Main Content -->
+    <div class="relative z-10 text-center px-6 max-w-6xl mx-auto">
+      <!-- Welcome Text -->
+      <div class="mb-8">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 text-gray-900">
+          Welcome to
+        </h1>
+        <div class="relative inline-block">
+          <h1 class="hero-typing-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900">
+            Friends Consulting 👋
+          </h1>
+        </div>
+      </div>
+      
+      <!-- Subtitle -->
+      <p class="text-lg md:text-xl lg:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
+        Revolutionizing the future with cutting-edge AI solutions and innovative consulting services
+      </p>
+      
+      <!-- CTA Card -->
+      <div class="floating hover-scale">
+        <div class="relative glass rounded-3xl p-8 md:p-12 shadow-2xl max-w-2xl mx-auto">
+          <!-- NEW Badge -->
+          <span class="absolute -top-3 -right-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg pulse-glow">
+            ✨ NEW
+          </span>
+          
+          <!-- Main CTA Content -->
+          <div class="space-y-6">
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-900 mb-4">
+              Join the AI Revolution
+            </h3>
+            <p class="text-gray-700 text-sm md:text-base mb-6">
+              Be part of the next generation of AI-powered solutions. Transform your business with our expert consulting.
+            </p>
+            
+            <!-- CTA Button -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpuIUl4Zwq0C8JPReVF53NUpvwj4NPMy9wlq1TVHTsJpr_IA/viewform?usp=header_link" 
+               target="_blank"
+               class="glow-button inline-flex items-center gap-3 bg-gradient-to-r from-gray-900 to-gray-700 text-white px-8 py-4 rounded-full font-semibold text-lg tracking-wide shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <span class="text-2xl group-hover:scale-110 transition-transform duration-300">🤖</span>
+              <span>Get Started Today</span>
+              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+          
+          <!-- Features List -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-white/20">
+            <div class="flex items-center gap-3 text-gray-800">
+              <div class="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center">
+                <span class="text-sm">🚀</span>
+              </div>
+              <span class="font-medium">Fast Setup</span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-800">
+              <div class="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center">
+                <span class="text-sm">🎯</span>
+              </div>
+              <span class="font-medium">Expert Support</span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-800">
+              <div class="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center">
+                <span class="text-sm">💡</span>
+              </div>
+              <span class="font-medium">Innovation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </div>
     </div>
-      <div class="mt-6 relative bg-cyan-200 p-6 rounded-2xl shadow-lg">
-      <!-- NEW Badge -->
-      <span
-        class="absolute top-3 right-3 bg-cyan-400 text-[#0d3b47] text-xs font-bold px-2 py-1 rounded-full shadow">
-        NEW
-      </span>
-
-      <!-- Button -->
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpuIUl4Zwq0C8JPReVF53NUpvwj4NPMy9wlq1TVHTsJpr_IA/viewform?usp=header_link" 
-        target="_blank"
-        class="inline-block bg-black text-white px-8 py-3 rounded-full font-semibold tracking-wide shadow-md hover:bg-cyan-600 hover:shadow-lg transition duration-300 ease-in-out">
-        🤖 Join us in the revolution of AI
-      </a>
-    </div>
-
   </section>
 
   <!-- Services -->
@@ -240,8 +402,8 @@
       <p class="text-gray-200 text-lg leading-relaxed hover:text-cyan-200 transition duration-300">
         <span class="font-semibold text-cyan-400">Friends Consulting</span> is your all-in-one destination for creating unforgettable experiences. From mesmerizing events—sound, light, and food—to capturing timeless moments with our photography services, we bring creativity and precision to every event.<br /><br />
         We also offer modern <span class="text-cyan-300">web design and creation</span> solutions, along with <span class="text-cyan-300">PR and digital marketing management</span> for the overall social management of the client and others.<br /><br />
-        So, if you’re planning a grand celebration or seeking <span class="text-cyan-300">career counseling</span>, our expert team ensures a seamless, professional experience from start to finish.<br /><br />
-        At Friends Consulting, we don’t just plan events—we craft memories that last for a lifetime.
+        So, if you're planning a grand celebration or seeking <span class="text-cyan-300">career counseling</span>, our expert team ensures a seamless, professional experience from start to finish.<br /><br />
+        At Friends Consulting, we don't just plan events—we craft memories that last for a lifetime.
       </p>
     </div>
   </section>
@@ -311,6 +473,54 @@
   </footer>
 
   <script>
+    // Show popup automatically on page load
+    window.onload = function() {
+      document.getElementById("imagePopup").classList.remove("hidden");
+    }
+
+    function closeImagePopup() {
+      document.getElementById("imagePopup").classList.add("hidden");
+    }
+
+    // Particle animation for hero section
+    function createParticle() {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      
+      // Random size between 2-6px
+      const size = Math.random() * 4 + 2;
+      particle.style.width = size + 'px';
+      particle.style.height = size + 'px';
+      
+      // Random horizontal position
+      particle.style.left = Math.random() * 100 + '%';
+      
+      // Random animation duration between 10-20 seconds
+      const duration = Math.random() * 10 + 10;
+      particle.style.animation = `particleFloat ${duration}s linear infinite`;
+      
+      const particlesContainer = document.getElementById('particles');
+      if (particlesContainer) {
+        particlesContainer.appendChild(particle);
+        
+        // Remove particle after animation completes
+        setTimeout(() => {
+          if (particle.parentNode) {
+            particle.remove();
+          }
+        }, duration * 1000);
+      }
+    }
+    
+    // Create particles periodically
+    setInterval(createParticle, 300);
+    
+    // Create initial particles
+    for (let i = 0; i < 5; i++) {
+      setTimeout(createParticle, i * 100);
+    }
+
+    // Contact form handling
     const scriptURL = 'https://script.google.com/macros/s/AKfycbytxWTSr4FhzxP_rScD4d9Soj-Le_owfdM1RMFOCBtdFBpT1OxDVRt2-hfJCvuVzfXzHQ/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
