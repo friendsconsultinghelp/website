@@ -2,159 +2,215 @@
 <html lang="en">
 
 <head>
-  <title>friendsConsulting</title>
-  <meta name="description" content="Friends Consulting offers event management, photography, video editing, graphic designing, digital marketing, and career counseling services. We make your events memorable and your brand visible." />
+  <title>Friends Consulting - AI & Innovation Leaders</title>
+  <meta name="description" content="Friends Consulting offers cutting-edge AI solutions, event management, photography, video editing, graphic designing, digital marketing, and career counseling services. Transform your business with innovation." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="UTF-8" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Friends Consulting – Event Services, video editing, photography, Web, digital marketing and more." />
-  <meta property="og:description" content="Make your events unforgettable with Friends Consulting:  event management, photography, video editing, graphic designing, digital marketing, web, and more." />
+  <meta property="og:title" content="Friends Consulting – AI Solutions, Event Services, Digital Innovation" />
+  <meta property="og:description" content="Revolutionary AI-powered consulting services. Event management, photography, video editing, web design, digital marketing and more." />
   <meta property="og:image" content="https://friendsconsulting.in/assets/logo.jpg" />
   <meta property="og:url" content="https://friendsconsulting.in/" />
   <meta property="og:type" content="website" />
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'gradient': 'gradient 15s ease infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+            'bounce-slow': 'bounce 3s infinite',
+            'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+            'slide-in-left': 'slideInLeft 0.8s ease-out forwards',
+            'slide-in-right': 'slideInRight 0.8s ease-out forwards',
+            'typing': 'typing 3.5s steps(40, end) 1s both',
+            'blink': 'blink 1s step-end infinite',
+            'particle-float': 'particleFloat 15s linear infinite',
+            'shimmer': 'shimmer 2s linear infinite',
+          },
+          backgroundImage: {
+            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+            'mesh-gradient': 'radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%), radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%), radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%), radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%)',
+          },
+          backdropBlur: {
+            'xs': '2px',
+          }
+        }
+      }
+    }
+  </script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/png" href="assets/logo.jpg" />
   
-
   <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
     html {
       scroll-behavior: smooth;
     }
 
     body {
-      background-color: #012037;
-      color: #f1f1f1;
+      background: linear-gradient(135deg, #0c4a6e 0%, #075985 25%, #0369a1 50%, #0284c7 75%, #0ea5e9 100%);
+      color: #f1f5f9;
+      overflow-x: hidden;
+    }
+
+    /* Enhanced Navbar */
+    .navbar-glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .navbar-scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     }
 
     .nav-link {
       position: relative;
       display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+      font-weight: 500;
     }
 
-    .nav-link::after {
+    .nav-link::before {
       content: "";
       position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 0%;
-      height: 2px;
-      background: linear-gradient(to right,
-          #9ff5cf,
-          #00cfff);
-      transition: width 0.3s ease-in-out;
-    }
-
-    .nav-link:hover::after {
-      width: 100%;
-    }
-
-    /* Enhanced Hero Section Styles */
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    
-    .animated-gradient {
-      background: linear-gradient(-45deg, #00d4ff, #9ff5cf, #00cfff, #7dd3fc, #22d3ee);
-      background-size: 400% 400%;
-      animation: gradientShift 8s ease infinite;
-    }
-    
-    /* Typing animation for hero */
-    @keyframes heroTyping {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-    
-    @keyframes heroBlink {
-      0%, 50% { border-color: transparent; }
-      51%, 100% { border-color: #000; }
-    }
-    
-    .hero-typing-text {
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: 2px solid #000;
-      animation: heroTyping 3s steps(20) 1s both, heroBlink 1s step-end infinite;
-      display: inline-block;
-    }
-    
-    /* Floating animation */
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      33% { transform: translateY(-10px) rotate(1deg); }
-      66% { transform: translateY(5px) rotate(-1deg); }
-    }
-    
-    .floating {
-      animation: float 6s ease-in-out infinite;
-    }
-    
-    /* Pulse animation for badge */
-    @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 5px rgba(34, 211, 238, 0.5); }
-      50% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.8), 0 0 30px rgba(34, 211, 238, 0.4); }
-    }
-    
-    .pulse-glow {
-      animation: pulse-glow 2s ease-in-out infinite;
-    }
-    
-    /* Glass morphism effect */
-    .glass {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    /* Hover effects */
-    .hover-scale {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .hover-scale:hover {
-      transform: scale(1.05) translateY(-5px);
-    }
-    
-    /* Button glow effect */
-    .glow-button {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .glow-button::before {
-      content: '';
-      position: absolute;
       top: 0;
-      left: -100%;
+      left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-      transition: left 0.5s;
+      background: linear-gradient(135deg, #06b6d4, #3b82f6);
+      border-radius: 0.5rem;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: -1;
     }
-    
-    .glow-button:hover::before {
-      left: 100%;
+
+    .nav-link:hover::before {
+      opacity: 1;
+      transform: scale(1);
     }
-    
-    /* Particle effect */
-    .particle {
-      position: absolute;
-      background: rgba(255, 255, 255, 0.6);
-      border-radius: 50%;
-      pointer-events: none;
+
+    .nav-link:hover {
+      color: white !important;
+      transform: translateY(-2px);
     }
-    
+
+    /* Typing animation for friends consulting */
+    #friends-typing {
+      font-weight: 900;
+      font-size: clamp(2rem, 8vw, 5rem);
+      color: #06b6d4;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #06b6d4;
+      padding-right: 0.2em;
+      letter-spacing: 0.05em;
+      max-width: 100%;
+      box-sizing: border-box;
+      text-transform: lowercase;
+      text-align: center;
+      margin: 0 auto;
+      display: inline-block;
+    }
+
+    #friends-cursor {
+      display: inline-block;
+      width: 3px;
+      height: 1.2em;
+      background-color: #06b6d4;
+      vertical-align: bottom;
+      margin-left: -3px;
+      animation: cursor-blink 1s step-end infinite;
+    }
+
+    @keyframes cursor-blink {
+      0%, 50% {
+        opacity: 1;
+      }
+      50.01%, 100% {
+        opacity: 0;
+      }
+    }
+
+    /* Keyframes */
+    @keyframes gradient {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      33% { transform: translateY(-20px) rotate(2deg); }
+      66% { transform: translateY(10px) rotate(-1deg); }
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { 
+        box-shadow: 0 0 20px rgba(6, 182, 212, 0.5), 0 0 60px rgba(6, 182, 212, 0.2); 
+      }
+      50% { 
+        box-shadow: 0 0 40px rgba(6, 182, 212, 0.8), 0 0 100px rgba(6, 182, 212, 0.4); 
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(60px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
     @keyframes particleFloat {
       0% {
-        transform: translateY(0) rotate(0deg);
+        transform: translateY(100vh) rotate(0deg);
         opacity: 0;
       }
       10% {
@@ -169,341 +225,987 @@
       }
     }
 
-    /* Legacy typing animation for about section */
-    @keyframes typing {
-      0% {
-        width: 0;
-      }
-
-      50% {
-        width: 100%;
-      }
-
-      100% {
-        width: 0;
-      }
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
     }
 
-    @keyframes blink {
-      0%, 100% {
-        border-color: transparent;
-      }
-      50% {
-        border-color: black;
-      }
+    /* Glass morphism */
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
     }
 
-    .typing {
+    .glass-dark {
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Enhanced animations */
+    .hover-lift {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .glow-button {
+      position: relative;
       overflow: hidden;
-      white-space: nowrap;
-      border-right: 2px solid black;
-      animation: typing 4s steps(30, end) infinite,
-        blink 0.7s step-end infinite;
+      background: linear-gradient(135deg, #06b6d4, #3b82f6, #8b5cf6);
+      background-size: 200% 200%;
+      animation: gradient 3s ease infinite;
+    }
+
+    .glow-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transition: left 0.5s;
+    }
+
+    .glow-button:hover::before {
+      left: 100%;
+    }
+
+    /* Particle system */
+    .particle {
+      position: absolute;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.8) 0%, rgba(59, 130, 246, 0.6) 50%, transparent 100%);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: particleFloat 12s linear infinite;
+    }
+
+    /* Enhanced service cards */
+    .service-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .service-card:hover {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(59, 130, 246, 0.1) 100%);
+      border-color: rgba(6, 182, 212, 0.5);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(6, 182, 212, 0.2);
+    }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #06b6d4, #3b82f6);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(135deg, #0891b2, #2563eb);
+    }
+
+    /* Loading animation */
+    .loading-dot {
+      animation: loading 1.4s ease-in-out infinite both;
+    }
+
+    .loading-dot:nth-child(1) { animation-delay: -0.32s; }
+    .loading-dot:nth-child(2) { animation-delay: -0.16s; }
+
+    @keyframes loading {
+      0%, 80%, 100% { transform: scale(0); }
+      40% { transform: scale(1); }
+    }
+
+    /* Intersection Observer classes */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .slide-left {
+      opacity: 0;
+      transform: translateX(-100px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .slide-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .slide-right {
+      opacity: 0;
+      transform: translateX(100px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .slide-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 768px) {
+      .service-card {
+        transform: none;
+      }
+      
+      .service-card:hover {
+        transform: translateY(-4px) scale(1.01);
+      }
+
+      #friends-typing {
+        font-size: clamp(1.5rem, 10vw, 3rem);
+      }
     }
   </style>
 </head>
 
-<body class="text-white font-sans">
-  <!-- Header/Navbar -->
-  <header id="navbar" class="sticky top-0 z-50 bg-white/60 backdrop-blur-md transition-all duration-300 shadow">
-    <div class="max-w-2xl mx-auto flex justify-between items-center px-1.5">
-      <a href="#">
-        <img src="assets/logo.png" alt="Logo" class="h-16 w-auto" />
+<body class="text-white">
+  <!-- Enhanced Header/Navbar -->
+  <header id="navbar" class="fixed top-0 w-full z-50 navbar-glass transition-all duration-500">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+          <img src="assets/logo.png" alt="Friends Consulting Logo" class="relative h-12 w-12 rounded-full border-2 border-white/20" />
+        </div>
+        <span class="font-bold text-xl bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          Friends Consulting
+        </span>
       </a>
-      <nav class="space-x-4">
-<!--         <a href="user_sign_up/sign_up.html" class="nav-link text-[#06333d]">Sign Up</a> -->
-        <a href="#services" class="nav-link text-[#06333d]">Services</a>
-        <a href="#about" class="nav-link text-[#06333d]">About</a>
-        <a href="#contact" class="nav-link text-[#06333d]">Contact</a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-2">
+        <a href="#services" class="nav-link text-gray-700 hover:text-white">Services</a>
+        <a href="#about" class="nav-link text-gray-700 hover:text-white">About</a>
+        <a href="#contact" class="nav-link text-gray-700 hover:text-white">Contact</a>
+        <a href="#chatbox" class="nav-link bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full hover:shadow-lg">
+          💬 ChatFlow
+        </a>
       </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-cyan-500 transition">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-200">
+      <div class="px-6 py-4 space-y-3">
+        <a href="#services" class="block py-2 text-gray-700 hover:text-cyan-500 transition">Services</a>
+        <a href="#about" class="block py-2 text-gray-700 hover:text-cyan-500 transition">About</a>
+        <a href="#contact" class="block py-2 text-gray-700 hover:text-cyan-500 transition">Contact</a>
+        <a href="#chatbox" class="block py-2 text-cyan-500 font-semibold">💬 ChatFlow</a>
+      </div>
     </div>
   </header>
 
-  <!-- Image Popup -->
-  <div id="imagePopup"
-    class="hidden fixed inset-0 bg-black/80 flex justify-center items-center z-[9999]">
-    
-    <div class="flex flex-col items-center w-[420px]">
-      <!-- Image Box -->
-      <div class="relative w-full h-full overflow-hidden rounded-t-[10px] bg-black">
-        <button class="absolute top-2 right-2 bg-red-600 text-white border-none px-3 py-1.5 text-sm font-bold rounded z-10 hover:bg-red-700 transition"
-          onclick="closeImagePopup()"
-          aria-label="Close">X</button>
-        
+  <!-- Enhanced Image Popup -->
+  <div id="imagePopup" class="hidden fixed inset-0 bg-black/90 flex justify-center items-center z-[9999] backdrop-blur-sm">
+    <div class="relative max-w-md mx-4 glass rounded-2xl overflow-hidden">
+      <button class="absolute top-4 right-4 bg-red-500 hover:bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition z-10 hover:scale-110"
+        onclick="closeImagePopup()"
+        aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <div class="relative">
         <img src="https://res.cloudinary.com/djdgzhndc/image/upload/v1756188663/WhatsApp_Image_2025-08-23_at_10.32.47_fe809d0e_pe8pmp.jpg" 
-             alt="Popup Image"
-             class="w-full h-full object-cover rounded-t-[10px]" />
+             alt="Special Event Announcement"
+             class="w-full h-auto" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
       </div>
 
-      <!-- Register button OUTSIDE the image -->
-      <button class="w-full py-3 bg-green-600 text-white font-semibold text-lg border-none rounded-b-[10px] hover:bg-green-800 transition"
-        onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfpuIUl4Zwq0C8JPReVF53NUpvwj4NPMy9wlq1TVHTsJpr_IA/viewform?usp=header_link';">
-        Register Now
-      </button>
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-2 text-white">🎉 Special Event!</h3>
+        <p class="text-gray-300 mb-4">Join our exclusive AI revolution event and transform your business future.</p>
+        <button class="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-full transition hover:scale-105 hover:shadow-lg"
+          onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfpuIUl4Zwq0C8JPReVF53NUpvwj4NPMy9wlq1TVHTsJpr_IA/viewform?usp=header_link', '_blank')">
+          Register Now ✨
+        </button>
+      </div>
     </div>
   </div>
 
-  <!-- Enhanced Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center animated-gradient overflow-hidden">
-    <!-- Particle Background -->
-    <div id="particles" class="absolute inset-0 pointer-events-none"></div>
+  <!-- Revolutionary Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Animated Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-cyan-900"></div>
+    <div class="absolute inset-0 bg-mesh-gradient opacity-30"></div>
     
-    <!-- Main Content -->
-    <div class="relative z-10 text-center px-6 max-w-6xl mx-auto">
-      <!-- Welcome Text -->
-      <div class="mb-8">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 text-gray-900">
-          Welcome to
-        </h1>
-        <div class="relative inline-block">
-          <h1 class="hero-typing-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900">
-            Friends Consulting 👋
-          </h1>
+    <!-- Particle System -->
+    <div id="particles-container" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
+    
+    <!-- ChatFlow Banner -->
+    <!-- <div class="absolute top-20 left-1/2 transform -translate-x-1/2 z-20">
+      <div class="glass px-6 py-3 rounded-full border border-cyan-400/30 animate-pulse-glow">
+        <div class="flex items-center space-x-3">
+          <div class="w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
+          <span class="text-cyan-400 font-semibold">🎭 ChatFlow is Live!</span>
+          <div class="text-yellow-400">✨</div>
         </div>
       </div>
-      
-      <!-- Subtitle -->
-      <p class="text-lg md:text-xl lg:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
-        Revolutionizing the future with cutting-edge AI solutions and innovative consulting services
-      </p>
-      
-      <!-- CTA Card -->
-      <div class="floating hover-scale">
-        <div class="relative glass rounded-3xl p-8 md:p-12 shadow-2xl max-w-2xl mx-auto">
-          <!-- NEW Badge -->
-          <span class="absolute -top-3 -right-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg pulse-glow">
-            ✨ NEW
-          </span>
-          
-          <!-- Main CTA Content -->
-          <div class="space-y-6">
-            <h3 class="text-xl md:text-2xl font-semibold text-gray-900 mb-4">
-              Join the AI Revolution
-            </h3>
-            <p class="text-gray-700 text-sm md:text-base mb-6">
-              Be part of the next generation of AI-powered solutions. Transform your business with our expert consulting.
-            </p>
-            
-            <!-- CTA Button -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpuIUl4Zwq0C8JPReVF53NUpvwj4NPMy9wlq1TVHTsJpr_IA/viewform?usp=header_link" 
-               target="_blank"
-               class="glow-button inline-flex items-center gap-3 bg-gradient-to-r from-gray-900 to-gray-700 text-white px-8 py-4 rounded-full font-semibold text-lg tracking-wide shadow-xl hover:shadow-2xl transition-all duration-300 group">
-              <span class="text-2xl group-hover:scale-110 transition-transform duration-300">🤖</span>
-              <span>Get Started Today</span>
-              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </a>
+    </div> -->
+
+    <!-- Main Hero Content -->
+    <div class="relative z-10 text-center px-6 max-w-7xl mx-auto">
+      <!-- Typing Hero Title -->
+      <div class="fade-in mt-20">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 text-white">
+          Welcome to
+        </h1>
+        <div class="flex justify-center items-center">
+          <h1 id="friends-typing"></h1><span id="friends-cursor"></span>
+        </div>
+        
+        <div class="text-xl md:text-2xl lg:text-3xl text-gray-300 mt-8 mb-8 max-w-4xl mx-auto">
+          Transforming businesses with cutting-edge AI solutions & innovative consulting
+        </div>
+      </div>
+
+      <!-- ChatFlow CTA -->
+      <div class="slide-left mb-12">
+        <div class="relative glass-dark rounded-3xl p-8 max-w-2xl mx-auto hover-lift">
+          <div class="absolute -top-3 -right-3">
+            <div class="bg-gradient-to-r from-pink-500 to-rose-500 text-white text-sm font-bold px-4 py-2 rounded-full animate-bounce-slow">
+              🔥 Trending
+            </div>
           </div>
           
-          <!-- Features List -->
+          <div class="flex items-center justify-center mb-4">
+            <div class="text-4xl mr-3">🎭</div>
+            <h3 class="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              ChatFlow Anonymous Chat
+            </h3>
+          </div>
+          
+          <p class="text-gray-300 mb-6">
+            Experience our revolutionary anonymous chat feature! Connect, share, and engage without boundaries.
+          </p>
+          
+          <a href="#chatbox" class="glow-button inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-lg text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
+            <span class="text-2xl group-hover:scale-110 transition-transform">💬</span>
+            <span>Start Chatting Now</span>
+            <svg class="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Main CTA -->
+      <div class="slide-right">
+        <div class="glass rounded-3xl p-8 max-w-3xl mx-auto hover-lift">
+          <h2 class="text-xl md:text-2xl font-bold mb-4 text-white">
+            🚀 Join the Future of Business Innovation
+          </h2>
+          <p class="text-gray-300 mb-6">
+            From AI automation to complete digital transformation - we're your partners in the next generation of business excellence.
+          </p>
+          
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpuIUl4Zwq0C8JPReVF53NUpvwj4NPMy9wlq1TVHTsJpr_IA/viewform?usp=header_link" 
+             target="_blank"
+             class="glow-button inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-lg text-white transition-all duration-300 hover:scale-105 group">
+            <span class="text-2xl group-hover:scale-110 transition-transform">🤖</span>
+            <span>Transform Your Business</span>
+            <svg class="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+          
+          <!-- Feature highlights -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-white/20">
-            <div class="flex items-center gap-3 text-gray-800">
-              <div class="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center">
-                <span class="text-sm">🚀</span>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
+                <span class="text-lg">⚡</span>
               </div>
-              <span class="font-medium">Fast Setup</span>
+              <div>
+                <div class="font-semibold text-white">Lightning Fast</div>
+                <div class="text-sm text-gray-400">Rapid deployment</div>
+              </div>
             </div>
-            <div class="flex items-center gap-3 text-gray-800">
-              <div class="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center">
-                <span class="text-sm">🎯</span>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center">
+                <span class="text-lg">🎯</span>
               </div>
-              <span class="font-medium">Expert Support</span>
+              <div>
+                <div class="font-semibold text-white">Expert Team</div>
+                <div class="text-sm text-gray-400">24/7 support</div>
+              </div>
             </div>
-            <div class="flex items-center gap-3 text-gray-800">
-              <div class="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center">
-                <span class="text-sm">💡</span>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-gradient-to-r from-green-400 to-cyan-500 rounded-full flex items-center justify-center">
+                <span class="text-lg">💡</span>
               </div>
-              <span class="font-medium">Innovation</span>
+              <div>
+                <div class="font-semibold text-white">Innovation</div>
+                <div class="text-sm text-gray-400">Cutting-edge tech</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       
       <!-- Scroll Indicator -->
-      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white/70">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
         </svg>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="py-16 bg-[#062f38] text-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-3xl font-bold mb-10 text-center">Services We Offer</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <a href="events/events.html"
-          class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-            📅 Events Management
-          </h4>
-          <p>Complete planning & execution of your events.</p>
-        </a>
-
-        <a href="photography/photography.html"
-          class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-            📸 Photography
-          </h4>
-          <p>Capturing memories with creativity and quality.</p>
-        </a>
-
-        <a href="video/video.html"
-          class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-            📽️ Video Editing & Graphic Designing
-          </h4>
-          <p>Professional Video Editors & Graphic Designers at your service</p>
-        </a>
-        
-        <a href="marketing/marketing.html"
-          class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-            📢 PR and Digital Marketing
-          </h4>
-          <p>Boost your brand with smart PR and targeted digital campaigns.</p>
-        </a>
-
-        <a href="website/website.html"
-          class="block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-            💻 Web Design & Creation
-          </h4>
-          <p>Stylish and responsive websites built to impress.</p>
-        </a>
-
-        <a href="ai.html"
-          class="relative block bg-[#0d3b47] p-6 rounded-xl shadow hover:shadow-xl transition-all border border-transparent hover:border-cyan-400 hover:scale-105">
-        
-          <!-- New Mark -->
-          <span
-            class="absolute top-2 right-2 bg-cyan-400 text-[#0d3b47] text-xs font-bold px-2 py-1 rounded-full shadow">
-            NEW
+  <!-- ChatFlow Section -->
+  <section id="chatbox" class="py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+    <div class="absolute inset-0 bg-mesh-gradient opacity-20"></div>
+    
+    <div class="relative max-w-6xl mx-auto px-6 text-center">
+      <div class="fade-in mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="text-4xl mr-3">🎭</span>
+          <span class="bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent">
+            ChatFlow Anonymous Chat
           </span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Experience freedom of expression with our revolutionary anonymous chat platform. Connect, share, and engage without boundaries!
+        </p>
+      </div>
 
-          <h4 class="text-xl font-semibold text-cyan-400 mb-2">
-            🤖 AI and Automations 
-          </h4>
-          <p>Join us a AI Engineer.</p>
-        </a>
+      <div class="glass-dark rounded-3xl p-8 max-w-4xl mx-auto hover-lift">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="slide-left">
+            <h3 class="text-2xl font-bold mb-4 text-white">Why Choose ChatFlow?</h3>
+            <div class="space-y-4 text-left">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                  <i class="fas fa-shield-alt text-white text-sm"></i>
+                </div>
+                <span class="text-gray-300">100% Anonymous & Secure</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                  <i class="fas fa-comments text-white text-sm"></i>
+                </div>
+                <span class="text-gray-300">Real-time Conversations</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                  <i class="fas fa-globe text-white text-sm"></i>
+                </div>
+                <span class="text-gray-300">Global Community</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
+                  <i class="fas fa-heart text-white text-sm"></i>
+                </div>
+                <span class="text-gray-300">Express Freely</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="slide-right">
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 text-left">
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                  <span class="text-green-400 font-semibold">Live Chat Preview</span>
+                </div>
+                <div class="text-gray-400 text-sm">24/7 Active</div>
+              </div>
+              
+              <div class="space-y-3 mb-4 max-h-48 overflow-y-auto">
+                <div class="bg-blue-600 text-white p-3 rounded-lg rounded-bl-none max-w-xs">
+                  <div class="text-sm">Anonymous User #247</div>
+                  <div>Hey everyone! Just discovered this amazing platform! 🎉</div>
+                </div>
+                <div class="bg-purple-600 text-white p-3 rounded-lg rounded-br-none max-w-xs ml-auto">
+                  <div class="text-sm">Anonymous User #156</div>
+                  <div>Welcome! The community here is fantastic! ✨</div>
+                </div>
+                <div class="bg-green-600 text-white p-3 rounded-lg rounded-bl-none max-w-xs">
+                  <div class="text-sm">Anonymous User #89</div>
+                  <div>Love the freedom to express without boundaries! 🚀</div>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-2 bg-gray-700 rounded-full p-2">
+                <input type="text" placeholder="Type your anonymous message..." 
+                       class="flex-1 bg-transparent text-white placeholder-gray-400 px-3 py-1 outline-none" disabled>
+                <button class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-2 rounded-full hover:scale-110 transition" disabled>
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+            
+            <div class="mt-6">
+              <a href="https://chat.friendsconsulting.in/" target="_blank" rel="noopener noreferrer">
+              <button class="w-full glow-button py-4 rounded-full font-semibold text-lg text-white transition-all duration-300 hover:scale-105">
+                🎭 Join ChatFlow Now - It's Free!
+              </button>
+            </a>
+
+              <p class="text-sm text-gray-400 mt-2">No registration required • Instant access • 100% Anonymous</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="py-16 bg-[#06333d] text-white">
-    <div class="max-w-4xl mx-auto text-center px-4">
-      <h3 class="text-4xl font-bold mb-6 inline-block text-cyan-400 typing-text">
-        About Us
-      </h3>
-      <p class="text-gray-200 text-lg leading-relaxed hover:text-cyan-200 transition duration-300">
-        <span class="font-semibold text-cyan-400">Friends Consulting</span> is your all-in-one destination for creating unforgettable experiences. From mesmerizing events—sound, light, and food—to capturing timeless moments with our photography services, we bring creativity and precision to every event.<br /><br />
-        We also offer modern <span class="text-cyan-300">web design and creation</span> solutions, along with <span class="text-cyan-300">PR and digital marketing management</span> for the overall social management of the client and others.<br /><br />
-        So, if you're planning a grand celebration or seeking <span class="text-cyan-300">career counseling</span>, our expert team ensures a seamless, professional experience from start to finish.<br /><br />
-        At Friends Consulting, we don't just plan events—we craft memories that last for a lifetime.
-      </p>
-    </div>
-  </section>
+  <!-- Enhanced Services Section -->
+  <section id="services" class="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative">
+    <div class="absolute inset-0 bg-mesh-gradient opacity-10"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            Our Revolutionary Services
+          </span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Cutting-edge solutions powered by AI and innovation to transform your business landscape
+        </p>
+      </div>
 
-  <!-- Contact -->
-  <section id="contact" class="py-12 bg-[#06333d]">
-    <div class="max-w-5xl mx-auto px-4">
-      <div class="md:flex md:justify-between md:space-x-10">
-        <div class="md:w-1/2 mb-8 md:mb-0">
-          <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-          <p class="mb-4 text-lg">
-            <i class="fa-solid fa-envelope text-cyan-400 mr-2"></i>
-            friendsconsultinghelp@gmail.com
-          </p>
-          <p class="mb-4 text-lg">
-            <i class="fa-solid fa-phone text-cyan-400 mr-2"></i> +91 8420566682
-          </p>
-          <p class="mb-4 text-lg">
-            <i class="fa-solid fa-phone text-cyan-400 mr-2"></i> +91 8079048424
-          </p>
-          <div class="social-icons mt-6 space-x-4 text-2xl">
-            <a href="https://www.facebook.com/share/1Fo5D4eF7X/"
-              class="text-white text-2xl inline-block transition duration-300 transform hover:-translate-y-1 hover:text-blue-500"><i
-                class="fab fa-facebook"></i></a>
-
-            <a href="https://wa.me/918420566682"
-              class="text-white text-2xl inline-block transition duration-300 transform hover:-translate-y-1 hover:text-[#25D366]"><i
-                class="fab fa-whatsapp"></i></a>
-            <a href="https://t.me/friendsconsultinghelp"
-              class="text-white text-2xl inline-block transition duration-300 transform hover:-translate-y-1 hover:text-blue-600"><i
-                class="fab fa-telegram"></i></a>
-            <a href="https://www.instagram.com/friendsconsulting_/"
-              class="text-white text-2xl inline-block transition duration-300 transform hover:-translate-y-1 hover:text-pink-500"><i
-                class="fa-brands fa-instagram"></i></a>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- AI & Automation -->
+        <div class="service-card rounded-2xl p-8 hover-lift fade-in group relative overflow-hidden">
+          <div class="absolute top-4 right-4">
+            <span class="bg-gradient-to-r from-pink-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
+              🔥 HOT
+            </span>
           </div>
-          <a href="assets/businessCard.pdf" target="_blank"
-            class="inline-block mt-6 px-5 py-2 bg-cyan-600 text-white rounded-full hover:bg-[black] transition">
-            Business Card
+          
+          <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🤖</div>
+          <h3 class="text-2xl font-bold text-cyan-400 mb-4">AI & Automation</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Revolutionary AI solutions and automation systems that transform your workflow and boost productivity by 300%.
+          </p>
+          
+          <div class="space-y-2 mb-6 text-sm">
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Custom AI Development</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Workflow Automation</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Machine Learning Models</span>
+            </div>
+          </div>
+          
+          <a href="ai.html" class="inline-flex items-center gap-2 text-cyan-400 hover:text-white transition font-semibold group">
+            <span>Explore AI Solutions</span>
+            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
           </a>
         </div>
 
-        <div class="md:w-1/2">
-          <form name="submit-to-google-sheet">
-            <input type="text" name="Name" placeholder="Your Name" required
-              class="w-full bg-gray-800 text-white p-3 rounded mb-4" />
-            <input type="email" name="email" placeholder="Your Email" required
-              class="w-full bg-gray-800 text-white p-3 rounded mb-4" />
-            <textarea name="Message" rows="6" placeholder="Your Message"
-              class="w-full bg-gray-800 text-white p-3 rounded mb-4 resize-none"></textarea>
-            <button type="submit" class="px-6 py-2 bg-cyan-600 text-white rounded-full hover:bg-[black] transition">
-              Submit
-            </button>
-          </form>
-          <span id="msg" class="text-green-400 mt-3 block"></span>
+        <!-- Event Management -->
+        <div class="service-card rounded-2xl p-8 hover-lift fade-in group">
+          <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🎉</div>
+          <h3 class="text-2xl font-bold text-cyan-400 mb-4">Event Management</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Complete event planning and execution with cutting-edge technology, ensuring unforgettable experiences.
+          </p>
+          
+          <div class="space-y-2 mb-6 text-sm">
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Full Event Planning</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Audio/Visual Setup</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Catering Coordination</span>
+            </div>
+          </div>
+          
+          <a href="events/events.html" class="inline-flex items-center gap-2 text-cyan-400 hover:text-white transition font-semibold group">
+            <span>Plan Your Event</span>
+            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+        <!-- Photography -->
+        <div class="service-card rounded-2xl p-8 hover-lift fade-in group">
+          <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">📸</div>
+          <h3 class="text-2xl font-bold text-cyan-400 mb-4">Professional Photography</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Capturing life's precious moments with artistic vision and professional expertise.
+          </p>
+          
+          <div class="space-y-2 mb-6 text-sm">
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Event Photography</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Portrait Sessions</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Commercial Shoots</span>
+            </div>
+          </div>
+          
+          <a href="photography/photography.html" class="inline-flex items-center gap-2 text-cyan-400 hover:text-white transition font-semibold group">
+            <span>View Portfolio</span>
+            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+        <!-- Video Production -->
+        <div class="service-card rounded-2xl p-8 hover-lift fade-in group">
+          <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🎬</div>
+          <h3 class="text-2xl font-bold text-cyan-400 mb-4">Video Production</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Professional video editing and graphic design services that bring your vision to life.
+          </p>
+          
+          <div class="space-y-2 mb-6 text-sm">
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Video Editing</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Motion Graphics</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Brand Design</span>
+            </div>
+          </div>
+          
+          <a href="video/video.html" class="inline-flex items-center gap-2 text-cyan-400 hover:text-white transition font-semibold group">
+            <span>See Our Work</span>
+            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+        <!-- Digital Marketing -->
+        <div class="service-card rounded-2xl p-8 hover-lift fade-in group">
+          <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">📱</div>
+          <h3 class="text-2xl font-bold text-cyan-400 mb-4">Digital Marketing</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Strategic digital marketing and PR campaigns that amplify your brand's reach and engagement.
+          </p>
+          
+          <div class="space-y-2 mb-6 text-sm">
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Social Media Marketing</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>SEO Optimization</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Brand Strategy</span>
+            </div>
+          </div>
+          
+          <a href="marketing/marketing.html" class="inline-flex items-center gap-2 text-cyan-400 hover:text-white transition font-semibold group">
+            <span>Boost Your Brand</span>
+            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+        <!-- Web Development -->
+        <div class="service-card rounded-2xl p-8 hover-lift fade-in group">
+          <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">💻</div>
+          <h3 class="text-2xl font-bold text-cyan-400 mb-4">Web Development</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Modern, responsive websites that deliver exceptional user experiences and drive business growth.
+          </p>
+          
+          <div class="space-y-2 mb-6 text-sm">
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Responsive Design</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>E-commerce Solutions</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400">
+              <i class="fas fa-check text-green-400"></i>
+              <span>Custom Development</span>
+            </div>
+          </div>
+          
+          <a href="website/website.html" class="inline-flex items-center gap-2 text-cyan-400 hover:text-white transition font-semibold group">
+            <span>Build Your Site</span>
+            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="mt-12 text-center bg-[#03272f] text-white py-4">
-    <p>
-      © friends Consulting. All rights reserved. Made with
-      <i class="fas fa-heart text-[#ff004f]"></i> by Rupam Ghosh & Abheek
-      Samaddar.
-    </p>
+  <!-- Enhanced About Section -->
+  <section id="about" class="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
+    <div class="absolute inset-0 bg-mesh-gradient opacity-20"></div>
+    
+    <div class="relative max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="slide-left">
+          <h2 class="text-4xl md:text-5xl font-bold mb-8">
+            <span class="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              About Friends Consulting
+            </span>
+          </h2>
+          
+          <div class="space-y-6 text-gray-300 leading-relaxed">
+            <p class="text-lg">
+              <span class="font-bold text-cyan-400">Friends Consulting</span> stands at the forefront of the AI revolution, 
+              combining cutting-edge artificial intelligence with traditional consulting excellence to create 
+              <span class="text-purple-400 font-semibold">transformative business solutions</span>.
+            </p>
+            
+            <p>
+              Our expertise spans from <span class="text-cyan-300 font-semibold">mesmerizing events</span> with 
+              state-of-the-art sound, lighting, and culinary experiences, to capturing life's most precious moments 
+              through our professional photography services.
+            </p>
+            
+            <p>
+              We're pioneers in <span class="text-purple-300 font-semibold">modern web design</span>, 
+              <span class="text-cyan-300 font-semibold">strategic digital marketing</span>, and comprehensive 
+              <span class="text-purple-300 font-semibold">PR management</span> that elevates your brand to new heights.
+            </p>
+            
+            <div class="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl p-6 border border-cyan-500/30">
+              <p class="font-semibold text-white mb-2">🚀 Our Mission:</p>
+              <p class="text-gray-200">
+                To revolutionize how businesses operate by seamlessly integrating AI-powered solutions 
+                with human creativity, ensuring every project we undertake becomes a catalyst for 
+                unprecedented growth and success.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="slide-right">
+          <div class="relative">
+            <div class="glass rounded-3xl p-8 hover-lift">
+              <h3 class="text-2xl font-bold mb-6 text-center text-white">Why Choose Us?</h3>
+              
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-robot text-white text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white mb-2">AI-Powered Innovation</h4>
+                    <p class="text-gray-300 text-sm">Leveraging cutting-edge AI to deliver solutions that are 10x more effective than traditional approaches.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-users text-white text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white mb-2">Expert Team</h4>
+                    <p class="text-gray-300 text-sm">A diverse team of AI specialists, creative professionals, and business strategists.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 bg-gradient-to-r from-green-400 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-chart-line text-white text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white mb-2">Proven Results</h4>
+                    <p class="text-gray-300 text-sm">Track record of delivering 300%+ ROI improvements for our clients across all industries.</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-clock text-white text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white mb-2">24/7 Support</h4>
+                    <p class="text-gray-300 text-sm">Round-the-clock support ensuring your business never skips a beat.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-8 text-center">
+                <div class="text-3xl font-bold text-white mb-2">500+</div>
+                <div class="text-cyan-400 font-semibold">Successful Projects</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Contact Section -->
+  <section id="contact" class="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-black relative">
+    <div class="absolute inset-0 bg-mesh-gradient opacity-10"></div>
+    
+    <div class="relative max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            Let's Transform Your Business
+          </span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Ready to join the AI revolution? Contact us today and discover how we can accelerate your business growth.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Contact Information -->
+        <div class="slide-left">
+          <div class="glass rounded-2xl p-8 hover-lift">
+            <h3 class="text-2xl font-bold mb-8 text-white">Get In Touch</h3>
+            
+            <div class="space-y-6">
+              <div class="flex items-center gap-4 group">
+                <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <div class="text-gray-400 text-sm">Email Us</div>
+                  <a href="mailto:friendsconsultinghelp@gmail.com" class="text-white hover:text-cyan-400 transition font-semibold">
+                    friendsconsultinghelp@gmail.com
+                  </a>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-4 group">
+                <div class="w-12 h-12 bg-gradient-to-r from-green-400 to-cyan-500 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+                  <i class="fas fa-phone text-white"></i>
+                </div>
+                <div>
+                  <div class="text-gray-400 text-sm">Call Us</div>
+                  <div class="space-y-1">
+                    <a href="tel:+918420566682" class="block text-white hover:text-cyan-400 transition font-semibold">
+                      +91 8420566682
+                    </a>
+                    <a href="tel:+918079048424" class="block text-white hover:text-cyan-400 transition font-semibold">
+                      +91 8079048424
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="pt-6 border-t border-gray-700">
+                <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+                <div class="flex gap-4">
+                  <a href="https://www.facebook.com/share/1Fo5D4eF7X/" target="_blank"
+                     class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 hover:scale-110 transition">
+                    <i class="fab fa-facebook text-white"></i>
+                  </a>
+                  <a href="https://wa.me/918420566682" target="_blank"
+                     class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 hover:scale-110 transition">
+                    <i class="fab fa-whatsapp text-white"></i>
+                  </a>
+                  <a href="https://t.me/friendsconsultinghelp" target="_blank"
+                     class="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 hover:scale-110 transition">
+                    <i class="fab fa-telegram text-white"></i>
+                  </a>
+                  <a href="https://www.instagram.com/friendsconsulting_/" target="_blank"
+                     class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center hover:scale-110 transition">
+                    <i class="fab fa-instagram text-white"></i>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="pt-6">
+                <a href="assets/businessCard.pdf" target="_blank"
+                   class="inline-flex items-center gap-2 glow-button px-6 py-3 rounded-full font-semibold text-white transition hover:scale-105">
+                  <i class="fas fa-download"></i>
+                  <span>Download Business Card</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="slide-right">
+          <div class="glass rounded-2xl p-8 hover-lift">
+            <h3 class="text-2xl font-bold mb-8 text-white">Send Message</h3>
+            
+            <form name="submit-to-google-sheet" class="space-y-6">
+              <div>
+                <label class="block text-gray-400 text-sm font-semibold mb-2">Your Name</label>
+                <input type="text" name="Name" required
+                       class="w-full bg-gray-800/50 backdrop-blur border border-gray-600 text-white p-4 rounded-xl focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition outline-none"
+                       placeholder="Enter your full name" />
+              </div>
+              
+              <div>
+                <label class="block text-gray-400 text-sm font-semibold mb-2">Email Address</label>
+                <input type="email" name="email" required
+                       class="w-full bg-gray-800/50 backdrop-blur border border-gray-600 text-white p-4 rounded-xl focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition outline-none"
+                       placeholder="Enter your email address" />
+              </div>
+              
+              <div>
+                <label class="block text-gray-400 text-sm font-semibold mb-2">Your Message</label>
+                <textarea name="Message" rows="6" required
+                          class="w-full bg-gray-800/50 backdrop-blur border border-gray-600 text-white p-4 rounded-xl focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition outline-none resize-none"
+                          placeholder="Tell us about your project or inquiry..."></textarea>
+              </div>
+              
+              <button type="submit" 
+                      class="w-full glow-button py-4 rounded-xl font-semibold text-lg text-white transition hover:scale-105 flex items-center justify-center gap-2">
+                <i class="fas fa-paper-plane"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+            
+            <div id="msg" class="mt-4 text-center font-semibold"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer class="bg-gradient-to-r from-gray-900 to-black text-center py-8 border-t border-gray-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="Friends Consulting" class="h-8 w-8 rounded-full" />
+          <span class="font-bold text-lg bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            Friends Consulting
+          </span>
+        </div>
+        
+        <div class="text-gray-400">
+          © 2025 Friends Consulting. All rights reserved. 
+          <span class="text-red-500">❤️</span> Crafted by 
+          <span class="text-cyan-400 font-semibold">Rupam Ghosh</span> & 
+          <span class="text-purple-400 font-semibold">Debasmit Bose</span>
+        </div>
+      </div>
+    </div>
   </footer>
 
+  <!-- Enhanced JavaScript -->
   <script>
-    // Show popup automatically on page load
-    window.onload = function() {
-      document.getElementById("imagePopup").classList.remove("hidden");
+    // Typing animation for Friends Consulting heading
+    const friendsText = "friends consulting";
+    const typingElement = document.getElementById("friends-typing");
+    let idx = 0;
+
+    function typeWriter() {
+      if (idx < friendsText.length) {
+        typingElement.textContent += friendsText.charAt(idx);
+        idx++;
+        setTimeout(typeWriter, 110);
+      }
     }
+
+    // Start typing animation when page loads
+    window.addEventListener('DOMContentLoaded', typeWriter);
+
+    // Navbar scroll effect
+    let lastScrollY = window.scrollY;
+    const navbar = document.getElementById('navbar');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add('navbar-scrolled');
+        navbar.classList.remove('navbar-glass');
+      } else {
+        navbar.classList.add('navbar-glass');
+        navbar.classList.remove('navbar-scrolled');
+      }
+      
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+        navbar.style.transform = 'translateY(-100%)';
+      } else {
+        navbar.style.transform = 'translateY(0)';
+      }
+      lastScrollY = window.scrollY;
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileMenuBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+
+    // Auto-show popup on page load
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('imagePopup').classList.remove('hidden');
+      }, 2000); // Show after 2 seconds
+    });
 
     function closeImagePopup() {
-      document.getElementById("imagePopup").classList.add("hidden");
+      document.getElementById('imagePopup').classList.add('hidden');
     }
 
-    // Particle animation for hero section
+    // Enhanced particle system
     function createParticle() {
       const particle = document.createElement('div');
       particle.className = 'particle';
       
-      // Random size between 2-6px
-      const size = Math.random() * 4 + 2;
+      const size = Math.random() * 6 + 2;
       particle.style.width = size + 'px';
       particle.style.height = size + 'px';
-      
-      // Random horizontal position
       particle.style.left = Math.random() * 100 + '%';
       
-      // Random animation duration between 10-20 seconds
-      const duration = Math.random() * 10 + 10;
+      const colors = ['rgba(6, 182, 212, 0.7)', 'rgba(59, 130, 246, 0.7)', 'rgba(139, 92, 246, 0.7)', 'rgba(236, 72, 153, 0.7)'];
+      particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+      
+      const duration = Math.random() * 8 + 10;
       particle.style.animation = `particleFloat ${duration}s linear infinite`;
       
-      const particlesContainer = document.getElementById('particles');
-      if (particlesContainer) {
-        particlesContainer.appendChild(particle);
+      const container = document.getElementById('particles-container');
+      if (container) {
+        container.appendChild(particle);
         
-        // Remove particle after animation completes
         setTimeout(() => {
           if (particle.parentNode) {
             particle.remove();
@@ -512,31 +1214,172 @@
       }
     }
     
-    // Create particles periodically
-    setInterval(createParticle, 300);
+    // Create particles continuously
+    setInterval(createParticle, 200);
     
-    // Create initial particles
-    for (let i = 0; i < 5; i++) {
+    // Initial particle burst
+    for (let i = 0; i < 10; i++) {
       setTimeout(createParticle, i * 100);
     }
 
-    // Contact form handling
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbytxWTSr4FhzxP_rScD4d9Soj-Le_owfdM1RMFOCBtdFBpT1OxDVRt2-hfJCvuVzfXzHQ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animated elements
+    document.addEventListener('DOMContentLoaded', () => {
+      const animatedElements = document.querySelectorAll('.fade-in, .slide-left, .slide-right');
+      animatedElements.forEach(el => observer.observe(el));
+    });
+
+    // Enhanced contact form handling
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbytxWTSr4FhzxP_rScD4d9Soj-Le_owfdM1RMFOCBtdFBpT1OxDVRt2-hfJCvuVzfXzHQ/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById('msg');
 
     form.addEventListener('submit', e => {
-      e.preventDefault()
+      e.preventDefault();
+      
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalText = submitButton.innerHTML;
+      
+      // Show loading state
+      submitButton.innerHTML = `
+        <div class="flex items-center justify-center gap-2">
+          <div class="loading-dot w-2 h-2 bg-white rounded-full"></div>
+          <div class="loading-dot w-2 h-2 bg-white rounded-full"></div>
+          <div class="loading-dot w-2 h-2 bg-white rounded-full"></div>
+          <span>Sending...</span>
+        </div>
+      `;
+      submitButton.disabled = true;
+      
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
-          msg.innerHTML = "Message sent successfully."
-          setTimeout(function () {
-            msg.innerHTML = ""
-          }, 5000)
-          form.reset()
+          msg.innerHTML = `
+            <div class="bg-green-500/20 text-green-400 border border-green-500/30 rounded-xl p-4">
+              <i class="fas fa-check-circle mr-2"></i>
+              Message sent successfully! We'll get back to you soon.
+            </div>
+          `;
+          form.reset();
         })
-        .catch(error => console.error('Error!', error.message))
-    })
+        .catch(error => {
+          msg.innerHTML = `
+            <div class="bg-red-500/20 text-red-400 border border-red-500/30 rounded-xl p-4">
+              <i class="fas fa-exclamation-circle mr-2"></i>
+              Oops! Something went wrong. Please try again.
+            </div>
+          `;
+        })
+        .finally(() => {
+          submitButton.innerHTML = originalText;
+          submitButton.disabled = false;
+          
+          setTimeout(() => {
+            msg.innerHTML = '';
+          }, 5000);
+        });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          
+          // Close mobile menu if open
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-times');
+          }
+        }
+      });
+    });
+
+    // Enhanced service card interactions
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        const icon = card.querySelector('.text-5xl');
+        if (icon) {
+          icon.style.transform = 'scale(1.2) rotate(10deg)';
+          icon.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+        }
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        const icon = card.querySelector('.text-5xl');
+        if (icon) {
+          icon.style.transform = 'scale(1) rotate(0deg)';
+        }
+      });
+    });
+
+    // Add keyboard navigation support
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        // Close popup
+        const popup = document.getElementById('imagePopup');
+        if (!popup.classList.contains('hidden')) {
+          closeImagePopup();
+        }
+        
+        // Close mobile menu
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          const icon = mobileMenuBtn.querySelector('i');
+          icon.classList.add('fa-bars');
+          icon.classList.remove('fa-times');
+        }
+      }
+    });
+
+    // Add scroll progress indicator
+    function updateScrollProgress() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      
+      let progressBar = document.getElementById('scroll-progress');
+      if (!progressBar) {
+        progressBar = document.createElement('div');
+        progressBar.id = 'scroll-progress';
+        progressBar.style.position = 'fixed';
+        progressBar.style.top = '0';
+        progressBar.style.left = '0';
+        progressBar.style.width = '100%';
+        progressBar.style.height = '3px';
+        progressBar.style.background = 'linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6)';
+        progressBar.style.transformOrigin = 'left';
+        progressBar.style.zIndex = '9999';
+        progressBar.style.transition = 'transform 0.1s ease';
+        document.body.appendChild(progressBar);
+      }
+      
+      progressBar.style.transform = `scaleX(${scrollPercent / 100})`;
+    }
+    
+    window.addEventListener('scroll', updateScrollProgress);
+    
+    // Initialize scroll progress
+    updateScrollProgress();
   </script>
 </body>
 </html>
