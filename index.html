@@ -219,27 +219,30 @@
     </div>
   </header>
 
-  <!-- Image Popup -->
-  <div id="imagePopup"
-    class="hidden fixed inset-0 bg-black/80 flex justify-center items-center z-[9999]">
-    
-    <div class="flex flex-col items-center w-[420px]">
-      <!-- Image Box -->
-      <div class="relative w-full h-full overflow-hidden rounded-t-[10px] bg-black">
-        <button class="absolute top-2 right-2 bg-red-600 text-white border-none px-3 py-1.5 text-sm font-bold rounded z-10 hover:bg-red-700 transition"
-          onclick="closeImagePopup()"
-          aria-label="Close">X</button>
-        
+  <!-- Enhanced Image Popup -->
+  <div id="imagePopup" class="hidden fixed inset-0 bg-black/90 flex justify-center items-center z-[9999] backdrop-blur-sm">
+    <div class="relative max-w-md mx-4 glass rounded-2xl overflow-hidden">
+      <button class="absolute top-4 right-4 bg-red-500 hover:bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition z-10 hover:scale-110"
+        onclick="closeImagePopup()"
+        aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <div class="relative">
         <img src="https://res.cloudinary.com/djdgzhndc/image/upload/v1756188663/WhatsApp_Image_2025-08-23_at_10.32.47_fe809d0e_pe8pmp.jpg" 
-             alt="Popup Image"
-             class="w-full h-full object-cover rounded-t-[10px]" />
+             alt="Special Event Announcement"
+             class="w-full h-auto" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
       </div>
 
-      <!-- Register button OUTSIDE the image -->
-      <button class="w-full py-3 bg-green-600 text-white font-semibold text-lg border-none rounded-b-[10px] hover:bg-green-800 transition"
-        onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfpuIUl4Zwq0C8JPReVF53NUpvwj4NPMy9wlq1TVHTsJpr_IA/viewform?usp=header_link';">
-        Register Now
-      </button>
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-2 text-white">🎉 Special Event!</h3>
+        <p class="text-gray-300 mb-4">Join our exclusive AI revolution event and transform your business future.</p>
+        <button class="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-full transition hover:scale-105 hover:shadow-lg"
+          onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfpuIUl4Zwq0C8JPReVF53NUpvwj4NPMy9wlq1TVHTsJpr_IA/viewform?usp=header_link', '_blank')">
+          Register Now ✨
+        </button>
+      </div>
     </div>
   </div>
 
